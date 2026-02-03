@@ -1,0 +1,39 @@
+# Commands to Run the Backend
+
+1. **Activate the Virtual Environment**
+   - Windows (PowerShell):
+     ```
+     .\venv\Scripts\Activate.ps1
+     ```
+   - Windows (Command Prompt):
+     ```
+     .\venv\Scripts\activate.bat
+     ```
+   - Linux/Mac:
+     ```
+     source venv/bin/activate
+     ```
+
+2. **Install Dependencies**
+   - Ensure all required dependencies are installed:
+     ```
+     pip install -r requirements.txt
+     ```
+
+3. **Set Environment Variables**
+   - If you have a `.env` file, ensure it is in the `backend` directory. The `python-dotenv` package will automatically load it.
+   - If you don't have a `.env` file, you can set the environment variables manually:
+     ```
+     $env:PYTHONPATH="D:\employee-management-system\backend"
+     ```
+
+4. **Run the Backend**
+   - Start the FastAPI application using the following command:
+     ```
+     python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload --app-dir d:\employee-management-system\backend
+     ```
+
+5. **Verify the Backend**
+   - Open a browser or use a tool like Postman to test the following endpoints:
+     - Health Check: [http://localhost:8000/api/health](http://localhost:8000/api/health)
+     - API Docs: [http://localhost:8000/api/docs](http://localhost:8000/api/docs)
