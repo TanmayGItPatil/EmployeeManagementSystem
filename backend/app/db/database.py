@@ -12,7 +12,7 @@ load_dotenv()
 class DatabaseConfig:
     """Database configuration class"""
     
-    HOST = os.getenv('DB_HOST', 'localhost')
+    HOST = os.getenv('DB_HOST', '34.228.54.218')
     PORT = int(os.getenv('DB_PORT', 3306))
     USER = os.getenv('DB_USER', 'root')
     PASSWORD = os.getenv('DB_PASSWORD', 'Qwertghjkl$1')
